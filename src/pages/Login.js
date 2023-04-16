@@ -1,4 +1,9 @@
-const Login = props => {
+import Cookies from 'universal-cookie';
+
+function Login() 
+{
+  const cookies = new Cookies();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -6,7 +11,9 @@ const Login = props => {
 
     if (username.value === 'user1' && password.value === 'pass1') 
     { // Mimic backend check
-      props.handleSubmitParent(true);
+      cookies.set('user', username.value); // In real life, this should be session ID
+      
+      window.location.reload();
     }
   };
 
@@ -27,6 +34,6 @@ const Login = props => {
       </form>
     </div>
   );
-};
+}
 
 export default Login;

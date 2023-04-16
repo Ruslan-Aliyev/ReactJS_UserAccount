@@ -1,19 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Login from './pages/Login.js';
 import Profile from './pages/Profile.js';
+
+import Cookies from 'universal-cookie';
 
 function App() 
 {
   const [loginSuccessful, setLoginSuccessful] = useState(false);
 
-  const updateLogin = (status) => {
-    setLoginSuccessful(status);
-  };
+  useEffect(() => {
+    const cookies = new Cookies();
+
+    if (cookies.get('user') === 'user1' /* Hardcoded user1 */)
+    {
+      setLoginSuccessful(true);
+    }
+  }, []);
 
   return (
     <div>
-      {loginSuccessful ? <Profile /> : <Login handleSubmitParent={updateLogin} />}
+      {loginSuccessful ? <Profile /> : <Login />}
     </div>
   );
 }
