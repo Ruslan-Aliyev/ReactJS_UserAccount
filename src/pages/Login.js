@@ -1,8 +1,10 @@
 import Cookies from 'universal-cookie';
+import { useNavigate } from 'react-router-dom';
 
 function Login() 
 {
   const cookies = new Cookies();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,8 +14,8 @@ function Login()
     if (username.value === 'user1' && password.value === 'pass1') 
     { // Mimic backend check
       cookies.set('user', username.value); // In real life, this should be session ID
-      
-      window.location.reload();
+
+      navigate('/profile');
     }
   };
 
