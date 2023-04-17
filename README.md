@@ -39,6 +39,12 @@ Storing login status in Context: https://github.com/Ruslan-Aliyev/ReactJS_UserAc
 	- Custom React hook: https://www.w3schools.com/react/react_customhooks.asp
 	- Provider pattern: https://mortenbarklund.com/blog/react-architecture-provider-pattern
 
+## Including a register page
+
+https://github.com/Ruslan-Aliyev/ReactJS_UserAccount/commit/84519ab8424f63aca91faaa3f52d3b7f0f629cde
+
+Another example: https://www.youtube.com/watch?v=Y-XW9m8qOis
+
 ## See Also
 
 - https://www.youtube.com/watch?v=wr3VmbZdVA4
