@@ -27,4 +27,5 @@ Notes:
 - React-Route-DOM v5: https://github.com/Ruslan-Aliyev/ReactJS_Routing
 	- https://www.youtube.com/playlist?list=PLC3y8-rFHvwjkxt8TOteFdT_YmzwpBlrG
 - React-Route-DOM v6: https://www.freecodecamp.org/news/how-to-use-react-router-version-6
+- Another similar example, but login status is stored state, and login status is passed from child to parent class component: https://www.youtube.com/watch?v=c5ODpAPrB74&list=PLS1QulWo1RIa3Q24UOH0DaOBxHNmwJOeO&index=15 (Episodes 13-17)
 - Programatically redirect: https://stackoverflow.com/questions/34735580/how-to-do-a-redirect-to-another-route-with-react-router/40380010#40380010
