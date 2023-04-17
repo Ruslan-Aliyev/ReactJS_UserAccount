@@ -1,5 +1,6 @@
 import Login from './pages/Login.js';
 import Profile from './pages/Profile.js';
+import Nav from './components/Nav.js';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -11,6 +12,7 @@ function App()
 
   return (
     <AuthProvider>
+      <Nav />
       <Routes>
           <Route path="/" element={<Login />}/>
           <Route path="/login" element={<Login />}/>
