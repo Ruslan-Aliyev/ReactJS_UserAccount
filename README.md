@@ -32,9 +32,15 @@ Notes:
 
 ## Context API
 
-Storing login status in Context instead
+Storing login status in Context: https://github.com/Ruslan-Aliyev/ReactJS_UserAccount/commit/323463161092ef4497fe106aebeb1ce40a2afd54
 
 - https://www.youtube.com/watch?v=X8eAbu1RWZ4&list=PLC3y8-rFHvwjkxt8TOteFdT_YmzwpBlrG&index=18&t=360s
 	- Context API (simplest example): https://github.com/atabegruslan/ReactJS-Flux-Redux/blob/master/notes.md#context-api-and-usecontext-hook
 	- Custom React hook: https://www.w3schools.com/react/react_customhooks.asp
 	- Provider pattern: https://mortenbarklund.com/blog/react-architecture-provider-pattern
+
+## See Also
+
+- https://www.youtube.com/watch?v=wr3VmbZdVA4
+	- https://www.npmjs.com/package/react-auth-kit
+		- https://authkit.arkadip.dev/installation/
