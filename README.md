@@ -29,3 +29,12 @@ Notes:
 - React-Route-DOM v6: https://www.freecodecamp.org/news/how-to-use-react-router-version-6
 - Another similar example, but login status is stored state, and login status is passed from child to parent class component: https://www.youtube.com/watch?v=c5ODpAPrB74&list=PLS1QulWo1RIa3Q24UOH0DaOBxHNmwJOeO&index=15 (Episodes 13-17)
 - Programatically redirect: https://stackoverflow.com/questions/34735580/how-to-do-a-redirect-to-another-route-with-react-router/40380010#40380010
+
+## Context API
+
+Storing login status in Context instead
+
+- https://www.youtube.com/watch?v=X8eAbu1RWZ4&list=PLC3y8-rFHvwjkxt8TOteFdT_YmzwpBlrG&index=18&t=360s
+	- Context API (simplest example): https://github.com/atabegruslan/ReactJS-Flux-Redux/blob/master/notes.md#context-api-and-usecontext-hook
+	- Custom React hook: https://www.w3schools.com/react/react_customhooks.asp
+	- Provider pattern: https://mortenbarklund.com/blog/react-architecture-provider-pattern

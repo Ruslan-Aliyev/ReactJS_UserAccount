@@ -1,10 +1,18 @@
-import Cookies from 'universal-cookie';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../utils/auth.js';
+import { useEffect } from 'react';
 
 function Login() 
 {
-  const cookies = new Cookies();
   const navigate = useNavigate();
+  const auth = useAuth();
+
+  useEffect(() => {
+    if (auth.user === 'user1')
+    {
+      navigate('/profile');
+    }
+  }, [auth, navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,7 +21,7 @@ function Login()
 
     if (username.value === 'user1' && password.value === 'pass1') 
     { // Mimic backend check
-      cookies.set('user', username.value); // In real life, this should be session ID
+      auth.login(username.value); // In real life, this should be session ID
 
       navigate('/profile');
     }

@@ -1,35 +1,22 @@
-import { useEffect } from "react";
-
 import Login from './pages/Login.js';
 import Profile from './pages/Profile.js';
 
-import Cookies from 'universal-cookie';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
+import { AuthProvider, RequireAuth } from './utils/auth.js';
 
 function App() 
 {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const cookies = new Cookies();
-
-    if (cookies.get('user') === 'user1' /* Hardcoded user1 */)
-    {
-      navigate('/profile');
-    }
-    else
-    {
-      navigate('/login');
-    }
-  }, [navigate]);
+  // Cant use const auth = useAuth(); and auth.user here. Because auth is nothing here
 
   return (
-    <div>
+    <AuthProvider>
       <Routes>
+          <Route path="/" element={<Login />}/>
           <Route path="/login" element={<Login />}/>
-          <Route path="/profile" element={<Profile />}/>
+          <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>}/>
       </Routes>
-    </div>
+    </AuthProvider>
   );
 }
 

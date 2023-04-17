@@ -1,22 +1,22 @@
-import Cookies from 'universal-cookie';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../utils/auth.js';
 
 function Profile() 
 {
-  const cookies = new Cookies();
   const navigate = useNavigate();
+  const auth = useAuth();
 
   const logout = (e) => {
     e.preventDefault();
 
-    cookies.remove('user');
+    auth.logout();
 
     navigate('/login');
   };
 
   return (
     <div>
-      Hi {cookies.get('user')}
+      Hi {auth.user}
       <button onClick={logout}>Logout</button>
     </div>
   );
