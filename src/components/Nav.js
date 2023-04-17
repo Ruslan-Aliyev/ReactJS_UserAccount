@@ -8,6 +8,7 @@ function Nav()
   return (
     <div>
       {!auth.user && <Link to="/login">Login</Link>}
+      {!auth.user && <Link to="/register">Register</Link>}
       {auth.user && <Link to="/profile">Profile</Link>}
     </div>
   );

@@ -1,4 +1,5 @@
 import Login from './pages/Login.js';
+import Register from './pages/Register.js';
 import Profile from './pages/Profile.js';
 import Nav from './components/Nav.js';
 
@@ -16,6 +17,7 @@ function App()
       <Routes>
           <Route path="/" element={<Login />}/>
           <Route path="/login" element={<Login />}/>
+          <Route path="/Register" element={<Register />}/>
           <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>}/>
       </Routes>
     </AuthProvider>

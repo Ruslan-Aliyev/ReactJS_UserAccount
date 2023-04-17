@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../utils/auth.js';
 import { useEffect } from 'react';
 
-function Login() 
+function Register() 
 {
   const navigate = useNavigate();
   const auth = useAuth();
@@ -19,18 +19,17 @@ function Login()
 
     const { username, password } = document.forms[0];
 
-    if (username.value === 'user1' && password.value === 'pass1') 
-    { // Mimic backend check
-      auth.login(username.value); // In real life, this should be session ID
+    // Various checks
 
-      navigate('/profile');
-    }
+    auth.login(username.value); // In real life, this should be session ID
+
+    navigate('/profile');
   };
 
   return (
     <div className="form">
       <form onSubmit={handleSubmit}>
-        Login
+        Register
         <div>
           <label>Username </label>
           <input type="text" name="username" required />
@@ -47,4 +46,4 @@ function Login()
   );
 }
 
-export default Login;
+export default Register;
